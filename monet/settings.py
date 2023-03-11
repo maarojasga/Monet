@@ -137,5 +137,3 @@ SIMPLE_JWT = {
     'AUTH_HEADER_TYPES': ('Bearer',),
     'USER_ID_FIELD': 'id',
 }
-
-SESSION_COOKIE_PATH = '/admin/'
