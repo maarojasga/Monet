@@ -20,7 +20,7 @@ class Test(models.Model):
     def __str__(self):
         return self.title
 
-# Información d elas preguntas y su relación con los exámenes
+# Información de las preguntas y su relación con los exámenes
 class Question(models.Model):
     test = models.ForeignKey(Test, on_delete=models.CASCADE)
     text = models.CharField(max_length=255)
@@ -28,7 +28,7 @@ class Question(models.Model):
     def __str__(self):
         return self.text
 
-# Información de las respuesta realcionadas con los estudiantes, los exámenes y las preguntas
+# Información de las respuestas realcionadas con los estudiantes, los exámenes y las preguntas
 class Answer(models.Model):
     student = models.ForeignKey(User, on_delete=models.CASCADE)
     test = models.ForeignKey(Test, on_delete=models.CASCADE)
