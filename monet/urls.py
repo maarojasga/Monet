@@ -18,7 +18,7 @@ from django.urls import path, include
 from app_test.views import LoginView, AnswerView
 
 urlpatterns = [
-    path('admin', admin.site.urls),
-    path('app_test/', include('app_test.urls')),
-
+    path('admin/', admin.site.urls),
+    path('login/', LoginView.as_view(), name='login'),
+    path('answer/', AnswerView.as_view(), name='answer'),
 ]
